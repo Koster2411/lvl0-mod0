@@ -1,38 +1,29 @@
 from tkinter import messagebox, simpledialog, Tk
-
+import random
+import random
 # Create an if-main code block, *hint, type main then ctrl+space to auto-complete
 if __name__ == '__main__':
-
     # Make a new window variable, window = Tk()
     window = Tk()
     # Hide the window using the window's .withdraw() method
     window.withdraw()
-    # 1. Create a variable to hold the user's score. Set it equal to zero. 
-    score = 0
-    # ASK A QUESTION AND CHECK THE ANSWER
-    question1 = simpledialog.askstring(title='latin', prompt='what does silva mean?')
-    #      // 2.  Ask the user a question 
+    # 1. Make a variable equal to a positive number less than 4 using random.randInt(0, 3)
+    number = random.randInt(0, 3)
+    # 2. Print your variable to the console
+    print(number)
+    # 3. Get the user to enter something that they think is awesome
+    question = simpledialog.askstring(title='number', prompt='enter somthing awsome')
+    # 4. If your variable is  0
+        # -- tell the user whatever they entered is awesome!
+    if number == 0:
+        messagebox.showinfo(title='awsome', message='your answer is awsome')
+    # 5. If your variable is  1
+        # -- tell the user whatever they entered is ok.
     
-    #      // 3.  Use an if statement to check if their answer is correct
-    if question1 == 'forest':
-        score + 1
-    #      // 4.  if the user's answer was correct, add one to their score 
-    else:
-        messagebox.showerror(title='wrong', message='loser loser loser loser loser')
-    # MAKE MORE QUESTIONS. Ask more questions by repeating the above
-    question1 = simpledialog.askstring(title='latin', prompt='what does porta mean?')
-    #      // 2.  Ask the user a question
-
-    #      // 3.  Use an if statement to check if their answer is correct
-    if question1 == 'gate':
-        score + 1
-    #      // 4.  if the user's answer was correct, add one to their score
-    else:
-        messagebox.showerror(title='wrong', message='loser loser loser loser loser')
-
-    #      // Option: Subtract a point from their score for a wrong answer
- 
-    # After all the questions have been asked, tell the user their final score
-    # remember to convert your variable to a string using the str() function 
+    # 6. If your variable is  2
+        # -- tell the user whatever they entered is boring.
     
-    window.mainloop()
+    # 7. If your variable is  3
+        # -- invent your own message to give to the user (be nice).
+        
+    # Run the window's .mainloop() method
